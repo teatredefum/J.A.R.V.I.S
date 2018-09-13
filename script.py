@@ -2,12 +2,12 @@ import aiml
 import os
 import time
 import argparse
-
+from mqtt import Mqtt 
 
 mode = "text"
 voice = "pyttsx"
 terminate = ['bye', 'buy', 'shutdown', 'exit', 'quit', 'gotosleep', 'goodbye']
-
+m = Mqtt();
 
 def get_arguments():
     parser = argparse.ArgumentParser()
@@ -59,6 +59,11 @@ def listen():
         print("Could not request results from " +
               "Google Speech Recognition service; {0}".format(e))
 
+def in_message(topic, payload):
+    jarvis_speech = kernel.respond(payload)
+    print("Jarvis: Listen, Denis, a new message from: " + topic, payload)
+    print("Denis: " + jarvis_speech)
+    m.outmessage(topic, jarvis_speech)    
 
 if __name__ == '__main__':
     args = get_arguments()
@@ -90,12 +95,14 @@ if __name__ == '__main__':
         kernel.bootstrap(learnFiles="std-startup.xml", commands="load aiml b")
         # kernel.saveBrain("bot_brain.brn")
 
+    m.start(in_message)
+    
     # kernel now ready for use
     while True:
         if mode == "voice":
             response = listen()
         else:
-            response = input("Talk to Denis: ")
+            response = input("")
         if response.lower().replace(" ", "") in terminate:
             break
         jarvis_speech = kernel.respond(response)
