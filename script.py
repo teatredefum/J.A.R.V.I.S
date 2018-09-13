@@ -95,9 +95,9 @@ if __name__ == '__main__':
         if mode == "voice":
             response = listen()
         else:
-            response = input("Talk to J.A.R.V.I.S : ")
+            response = input("Talk to Denis: ")
         if response.lower().replace(" ", "") in terminate:
             break
         jarvis_speech = kernel.respond(response)
-        print ("J.A.R.V.I.S: " + jarvis_speech)
+        print ("Denis: " + jarvis_speech)
         # speak(jarvis_speech)
