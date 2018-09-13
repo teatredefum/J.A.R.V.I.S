@@ -132,6 +132,12 @@ Individual packages listed as follows-
 - ### argparse (For parsing arguments)
     `pip install argparse`
 
+- ### mqtt (For iot.eclipse.org, 1883)
+     `pip install mqtt`
+
+Listens at: LAZA_ALEPH/DENIS
+Writes to: PLAZA_ALEPH/DENIS_SAYS + {{REQUEST TOPIC}}
+
 ## Installation:
 
 Clone this repository. Change directories to go to that directory. Run the script "script.py" **from the directory containing it**.
