@@ -13,14 +13,9 @@
         <template>
             <!-- <learn>alice/reduction/*.aiml</learn>
             <learn>alice/mp/*.aiml</learn>
-<<<<<<< HEAD
             <learn>*.aiml</learn>-->
             <learn>alice/*.aiml</learn> 
             
-=======
-            <learn>alice/*.aiml</learn> -->
-            <learn>*.aiml</learn>
->>>>>>> a162c773e276aa419944668d68140efe0fa4a6aa
             <!-- You can add more aiml files here -->
             <!--<learn>more_aiml.aiml</learn>-->
         </template>

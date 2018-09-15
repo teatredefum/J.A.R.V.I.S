@@ -23,11 +23,7 @@
                 <li>Always a pleasure working with you sir!</li> 
                 <li>Nice to see you sir!</li> 
                 <li>What would you like me to do sir?</li> 
-<<<<<<< HEAD
                 <li>Your will is my command!</li> 
-=======
-                <li>our will is my command!</li> 
->>>>>>> a162c773e276aa419944668d68140efe0fa4a6aa
             </random>
         </template>
     </category>
@@ -148,11 +144,7 @@
     </category>
 
     <category>
-<<<<<<< HEAD
         <pattern>WHO IS IRON MAN</pattern>
-=======
-        <pattern>WHO IS THE IRON MAN</pattern>
->>>>>>> a162c773e276aa419944668d68140efe0fa4a6aa
         <template>
             Iron man is the one who created me.
         </template>
@@ -161,11 +153,7 @@
     <category>
         <pattern>WHO IS THE REAL IRON MAN</pattern>
         <template>
-<<<<<<< HEAD
             The real Iron Man is Tony Stark.
-=======
-            The real Iron man is Tony Stark.
->>>>>>> a162c773e276aa419944668d68140efe0fa4a6aa
         </template>
     </category>
 
@@ -322,8 +310,4 @@
             <srai>PLAY SONG <input index="1"/></srai>
         </template>
     </category>
-<<<<<<< HEAD
 </aiml>
-=======
-</aiml>
->>>>>>> a162c773e276aa419944668d68140efe0fa4a6aa
