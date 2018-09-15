@@ -99,7 +99,7 @@ en el chat. Es una implementación IBM Node-Red.
 
 - Editor: https://clanaleph.eu-gb.mybluemix.net/red/
 - http://plaza-aleph.thk
-
+- Ver código: [Fichero importación node-red](./node-red-over-ibm-bluemix)
 Ver detalles:
 
 ![Plaza Aleph: un bot alice](botAlephbot/Denis001.png)
