@@ -89,8 +89,13 @@ Comando típicos:
 - heroku ps:scale web=1
 - heroku ps:scale denis=1
 - heroku open
+
 - heroku ps 
 - heroku logs -t -p denis
+
+- heroku run python manage.py createsuperuser
+- heroku run python manage.py makemigrations
+- Visit: https://denisbot.herokuapp.com/admin
 
 PLAZA ALEPH
 ===========

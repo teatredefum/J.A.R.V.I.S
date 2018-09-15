@@ -18,3 +18,7 @@ def db(request):
 
     return render(request, 'db.html', {'greetings': greetings})
 
+def heroku_django(request):
+    # return HttpResponse('Hello from Python!')
+    return render(request, 'heroku_django.html')
+
