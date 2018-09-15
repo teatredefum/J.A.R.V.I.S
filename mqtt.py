@@ -19,7 +19,7 @@ class Mqtt:
 		print("Jarvis:  MQTT is connecting to eclipse...")
 		client.subscribe("PLAZA_ALEPH/DENIS/#")
 		print("Jarvis:  MQTT sends test message...")
-		self.client.publish("PLAZA_ALEPH/DENIS", "hello")		
+		self.client.publish("PLAZA_ALEPH/DENIS/JARVIS", "Denis & me are back! hello!")		
 
 	# The callback for when a PUBLISH message is received from the server.
 	def on_message(self, client, userdata, msg):
@@ -32,11 +32,14 @@ class Mqtt:
 		self.in_message = in_message
 		self.client.connect("iot.eclipse.org", 1883, 60)
 
+		# self.client.loop_start()
 		# Blocking call that processes network traffic, dispatches callbacks and
 		# handles reconnecting.
 		# Other loop*() functions are available that give a threaded interface and a
-		# manual interface.
-		self.client.loop_start()
+		# manual interface. User stop()
+
+		# Blocking
+		self.client.loop_forever()
 
 	def stop(self):
 		self.client.loop_stop()

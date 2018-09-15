@@ -19,7 +19,6 @@ def get_arguments():
     arguments = parser.parse_args()
     return arguments
 
-
 def gtts_speak(jarvis_speech):
     tts = gTTS(text=jarvis_speech, lang='en')
     tts.save('jarvis_speech.mp3')
@@ -29,19 +28,16 @@ def gtts_speak(jarvis_speech):
     while mixer.music.get_busy():
         time.sleep(1)
 
-
 def offline_speak(jarvis_speech):
     engine = pyttsx.init()
     engine.say(jarvis_speech)
     engine.runAndWait()
-
 
 def speak(jarvis_speech):
     if voice == "gTTS":
         gtts_speak(jarvis_speech)
     else:
         offline_speak(jarvis_speech)
-
 
 def listen():
     r = sr.Recognizer()
@@ -98,13 +94,13 @@ if __name__ == '__main__':
     m.start(in_message)
     
     # kernel now ready for use
-    while True:
-        if mode == "voice":
-            response = listen()
-        else:
-            response = input("")
-        if response.lower().replace(" ", "") in terminate:
-            break
-        jarvis_speech = kernel.respond(response)
-        print ("Denis: " + jarvis_speech)
-        # speak(jarvis_speech)
+    # while True:
+    #    if mode == "voice":
+    #        response = listen()
+    #    else:
+    #        response = "Wait for mqtt, not for console" # input("... ")
+    #    if response.lower().replace(" ", "") in terminate:
+    #        break
+    #    jarvis_speech = kernel.respond(response)
+    #    print ("Denis: " + jarvis_speech)
+    #    speak(jarvis_speech)
